@@ -3,17 +3,18 @@
 <head>
     <meta charset="utf-8">
     
-    <title>归档: 2016 | Magic</title>
+    <title>hexo post | Magic</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Make every day count.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Magic">
-<meta property="og:url" content="http://donniesky.github.io/archives/2016/index.html">
+    <meta name="description" content="这是一个测试内容博客！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo post">
+<meta property="og:url" content="http://donniesky.github.io/2016/04/02/hexo-post/index.html">
 <meta property="og:site_name" content="Magic">
-<meta property="og:description" content="Make every day count.">
+<meta property="og:description" content="这是一个测试内容博客！">
+<meta property="og:updated_time" content="2016-04-02T09:19:02.683Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Magic">
-<meta name="twitter:description" content="Make every day count.">
+<meta name="twitter:title" content="hexo post">
+<meta name="twitter:description" content="这是一个测试内容博客！">
     
 
     
@@ -181,20 +182,16 @@ ga('send', 'pageview');
 </aside>
 
             
-            <section id="main"><div class="timeline timeline-wrap">
-    
-            <div class="timeline-row timeline-row-major">
-                <span class="node"><i class="fa fa-calendar"></i></span>
-                <h1 class="title">2016</h1>
-            </div>
+            <section id="main"><article id="post-hexo-post" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
+        
+        
+            <header class="article-header">
                 
     
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2016/04/02/hexo-post/">hexo post</a>
+        <h1 class="article-title" itemprop="name">
+            hexo post
         </h1>
     
 
@@ -221,36 +218,127 @@ ga('send', 'pageview');
     </div>
 
                 </div>
-            </div>
+            </header>
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h1 id="测试博客"><a href="#测试博客" class="headerlink" title="测试博客"></a>测试博客</h1><blockquote>
+<p>测试索引<br>1<br>2<br>3</p>
+</blockquote>
+<hr>
+<p><strong>以下为正文内容，测试结束</strong></p>
+
+        
         </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://donniesky.github.io/2016/04/02/hexo-post/" data-id="cimixapnt0000qctuqs03bzjg" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
     
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2016/04/02/hello-world/">Hello World</a>
-        </h1>
+        <a href="http://donniesky.github.io/2016/04/02/hexo-post/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://donniesky.github.io/2016/04/02/hexo-post/">评论</a>
     
 
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2016/04/02/hello-world/">
-            <time datetime="2016-04-02T07:44:01.841Z" itemprop="datePublished">2016-04-02</time>
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2016/04/02/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">Hello World</div>
         </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 
-
-                    
-                    
-                </div>
-            </div>
-        </div>
     
-</div>
+    </section>
+
 </section>
             
                 <aside id="sidebar">
@@ -372,11 +460,13 @@ ga('send', 'pageview');
     var disqus_shortname = 'hexo-theme-icarus';
     
     
+    var disqus_url = 'http://donniesky.github.io/2016/04/02/hexo-post/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
