@@ -1,7 +1,10 @@
 ---
 layout: post
 title:  "Welcome to Jekyll!"
+subtitle:   " \"Hello my jekyll blog\""
 date:   2016-04-09 15:55:28 +0800
+author:     "donnieSky"
+header-img: "img/post-bg-2015.jpg"
 categories: jekyll update
 tag:
 	-test
