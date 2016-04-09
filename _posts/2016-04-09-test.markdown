@@ -1,11 +1,11 @@
 ---
-layout: post
-title:  "Welcome to Jekyll!"
+layout: 	post
+title:  	"Welcome to Jekyll!"
 subtitle:   " \"Hello my jekyll blog\""
-date:   2016-04-09
+date:   	2016-04-09
 author:     "donnieSky"
 header-img: "img/post-bg-2015.jpg"
-tag:
+tags:
 	-test
 ---
 
