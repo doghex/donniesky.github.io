@@ -1,0 +1,40 @@
+---
+layout:     post
+title:      "My test's Blog"
+subtitle:   " \"Hello my jekyll blog\""
+date:       2016-04-09
+author:     "donnieSky"
+header-img: "img/post-bg-2015.jpg"
+tags:
+    - test
+---
+
+# 这是一个测试博客
+
+----
+
+> * 第一项
+> * 第二项
+> * 第三项
+
+----
+
+这里是主要内容。
+
+## main1
+
+akjsdlkjflkajksldfjlkajsdjf
+
+## main2
+
+asdfjkaksjdhfkasdfjka
+
+## main3
+
+ajsdlfalkjsdkjfa
+
+```code
+public void method(){
+	System.out.println("Hello world !");
+}
+```
