@@ -4,6 +4,7 @@ title:      "My test's Blog"
 subtitle:   " \"Hello my jekyll blog\""
 date:       2016-04-09
 author:     "donnieSky"
+catalog:	true
 header-img: "img/post-bg-2015.jpg"
 tags:
     - test
