@@ -67,7 +67,7 @@ ga_domain: donniesky.github.io
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Google脑残粉"
+sidebar-about-description: "好人一枚 | music film 动漫 | 读万卷书，行万里路"
 sidebar-avatar: /img/avatar-donniesky.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
