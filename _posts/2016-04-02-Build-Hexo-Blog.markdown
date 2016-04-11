@@ -25,7 +25,7 @@ tags:
 ## 修改`post`预设格式
 > 建议按照个人习惯修改`hexo\scaffolds`中的`post.md`
 
-```code
+```java
 ---
 title: {{ title }}
 date: {{ date }}
@@ -39,13 +39,13 @@ description:
 
 1.使用命令生成初始文章，文件名之间有空格的    话会自动加`-` **中横线**
 
-```code
+```java
 hexo n "my post"  #双引号中填写要生成的文章名
 ```
 
 2.在`hexo\source\_posts`中编辑生成出来的`my-post`文件
 
-```code
+```java
 ---
 title: my post  #可以改成中文的，如"我的文章"
 date: 2016-04-02 22:13:43  #发表日期，可以自定义修改排序
@@ -56,13 +56,13 @@ categories: blog  #自定义文章分类
 
 3.本地预览文章内容，登录`localhost:4000`查看效果
 
-```code
+```java
 hexo s
 ```
 
 4.发布内容到`public`文件夹中，然后手动复制同步`GitHub`
 
-```code
+```java
 hexo clean
 hexo g
 ```
@@ -71,21 +71,21 @@ hexo g
 
 1.命令手动生成自定义页面
 
-```code
+```java
 hexo n page "about"
 ```
 
 2.编辑`hexo/source/about/index.md`内容
 3.修改你主题下的`themes/你的主题/_config.yml`文件
 
-```code
+```java
 menu:
   关于: /about
 ```
 
 ### Hexo简写命令
 
-```code
+```java
 hexo n #生成文章，或者source\_posts手动编辑
 hexo s #本地发布预览效果
 hexo g #生成public静态文件
