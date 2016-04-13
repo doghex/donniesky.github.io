@@ -1,6 +1,6 @@
-# :octocat: 我的博客[Magic][1] :clap:
+# :octocat: 我的博客[DonnieSky][1] :clap:
 
-> 顾名思义 :point_right: Every day is magic day ! :bowtie: :pencil:
+> Don't be the same , be better！ :bowtie: :pencil:
 
 
 ---
