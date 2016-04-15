@@ -20,6 +20,7 @@ tags:
 ## 启用ProGuard
 
 * 在app文件夹下`build.gradle`中进行配置,将`minifyEnabled`改为`true`：
+
 ```java
 buildTypes {
         release {
@@ -28,6 +29,7 @@ buildTypes {
         }
     }
 ```
+
 如上代码所示，在`release`打包是就会按照我们`proguard-rules.pro`的配置进行混淆，在debug时是不会进行混淆的。
 
 ## 混淆ProGuard常用语法
