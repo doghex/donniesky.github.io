@@ -236,10 +236,15 @@ buildTypes {
 ```
 
 更多内容可以参考以下博客：
+
 [Android proguard 详解][1]
+
 [混淆样子][2]
+
 [Android代码混淆之混淆规则][3]
+
 [Android开发实践：利用ProGuard进行代码混淆][4]
+
 [使用proguard混淆android代码][5]
 
 [1]: http://blog.csdn.net/banketree/article/details/41928175
