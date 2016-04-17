@@ -115,6 +115,12 @@ public class SimpleImageView extends View{
 }
 ```
 
+这里我们创建了一个继承自View的`SimpleImageView`类，在构造函数中我们会获取该控件的属性，并且初始化要绘制的图片和画笔。
+
+在`initAttrs`函数中，我们首先读取SimpleImageView的属性集`TypedArray`,再从该对象中读取`SimpleImageView_src`属性值，该属性是一个`drawable`的资源id值，然后我们根据这个id从该`TypedArray`对象中获取该id对应的`drawable`;最后`measureDrawable`函数测量该图片`mDrawable`的大小。
+
+我们在`SimpleImageView`中定义了两个字段`mWidth`、`mHeight`分别表示SimpleImageView视图的宽度和高度。从`measureDrawable`函数我们可以看出，我们通过在xml文件中指定资源id对应的drawable得到图片的高度和宽度，并把它们当做SimpleImageView的宽和高，也就是说图片有多大，SimpleImageView就有多大。当SimpleImageView被加载时，首先会调用`onMeasure`函数测量SimpleImageView的大小，然后再将图片绘制出来。
+
 ### 步骤三：使用SimpleImageView
 
 ```java
@@ -139,12 +145,6 @@ public class SimpleImageView extends View{
 
 </LinearLayout>
 ```
-
-这里我们创建了一个继承自View的`SimpleImageView`类，在构造函数中我们会获取该控件的属性，并且初始化要绘制的图片和画笔。
-
-在`initAttrs`函数中，我们首先读取SimpleImageView的属性集`TypedArray`,再从该对象中读取`SimpleImageView_src`属性值，该属性是一个`drawable`的资源id值，然后我们根据这个id从该`TypedArray`对象中获取该id对应的`drawable`;最后`measureDrawable`函数测量该图片`mDrawable`的大小。
-
-我们在`SimpleImageView`中定义了两个字段`mWidth`、`mHeight`分别表示SimpleImageView视图的宽度和高度。从`measureDrawable`函数我们可以看出，我们通过在xml文件中指定资源id对应的drawable得到图片的高度和宽度，并把它们当做SimpleImageView的宽和高，也就是说图片有多大，SimpleImageView就有多大。当SimpleImageView被加载时，首先会调用`onMeasure`函数测量SimpleImageView的大小，然后再将图片绘制出来。
 
 运行示例代码，效果如下图：
 
