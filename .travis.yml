@@ -1,0 +1,20 @@
+language: ruby
+rvm:
+  - 2.3.3
+branches:
+  only:
+    - master
+script:
+  - bundle install
+  - bundle exec jekyll build
+after_success:
+  - git clone https://github.com/donniesky/donniesky.github.io.git
+  - cd donniesky.github.io && rm -rf * && cp -r ../_site/* .
+  - git config user.name "donnieSky"
+  - git config user.email "qmhs414@gmail.com"
+  - git add --all .
+  - git commit -m "Travis CI Auto Builder"
+  - git push --quiet --force https://$REPO_TOKEN@git@github.com/donniesky/donniesky.github.io.git master
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
