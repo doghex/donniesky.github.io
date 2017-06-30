@@ -5,6 +5,7 @@ branches:
   only:
     - master
 script:
+  - bundle update
   - bundle install
   - bundle exec jekyll build
 after_success:
