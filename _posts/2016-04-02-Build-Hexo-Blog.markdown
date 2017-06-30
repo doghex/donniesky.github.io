@@ -1,5 +1,6 @@
 ---
 layout:     post
+comments:   true
 title:      "Hexo简单操作命令"
 subtitle:   "\"Hexo命令\""
 date:       2016-04-02 12:00:00
