@@ -4,10 +4,6 @@ rvm:
 branches:
   only:
     - master
-script:
-  - bundle update
-  - bundle install
-  - bundle exec jekyll build
 after_success:
   - git clone https://github.com/donniesky/donniesky.github.io.git
   - cd donniesky.github.io && rm -rf * && cp -r ../_site/* .
