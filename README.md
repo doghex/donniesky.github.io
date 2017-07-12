@@ -1,4 +1,4 @@
-# :octocat: 我的博客[DonnieSky][1] :clap:
+# :octocat: 我的博客[DonnieSky][1] :clap:  [![Build Status](https://travis-ci.org/donniesky/donniesky.github.io.svg?branch=master)](https://travis-ci.org/donniesky/donniesky.github.io)
 
 > Don't be the same , be better！ :bowtie: :pencil:
 
