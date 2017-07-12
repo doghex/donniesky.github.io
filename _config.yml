@@ -5,13 +5,13 @@ header-img: img/home-bg.jpg
 email: qmhs414@gmail.com
 description: "Be confident, not arrogant."
 keyword: "donniesky, donnieSky, 博客，个人博客， Android, @donniesky, 个人网站"
-url: "http://donniesky.github.io/"              # your host, for absolute URL
+url: "https://donniesky.github.io/"              # your host, for absolute URL
 baseurl: ""         # for example, '/blog' if your blog hosted on 'host/blog'
 
 
 
 # SNS settings
-RSS: false
+RSS: true
 weibo_username:     234524814
 github_username:    donniesky
 twitter_username:   donnieSky815
@@ -25,7 +25,7 @@ instagram_username: donnie.view
 highlighter: rouge
 permalink: pretty
 paginate: 10
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md", "_drafts", "raw"]
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 
 
@@ -47,7 +47,7 @@ kramdown:
 
 
 # Disqus settings
-#disqus_username: donnieSky
+disqus_username: donnieSky
 
 
 # Analytics settings
