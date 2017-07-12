@@ -11,7 +11,7 @@ after_success:
   - git config user.email "qmhs414@gmail.com"
   - git add --all .
   - git commit -m "Travis CI Auto Builder"
-  - git push --force https://$REPO@github.com/donniesky/donniesky.github.io.git master
+  - git push --force https://$REPO_TOKEN@github.com/donniesky/donniesky.github.io.git master
   - ssh root@donniesky.github.io "docker restart mritd_jekyll_1"
 branches:
   only:
