@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Android MVVM「译」"
+title:      Android MVVM「译」
 subtitle:   "以Android Data Binding library为基础来探索实现MVVM"
 date:       2017-07-17 17:10:00
 author:     "donnieSky"
