@@ -12,7 +12,7 @@ tags:
     - 译文
 ---
 
-> 这篇文章来自[Zen Android MVVM - Medium]
+> 这篇文章来自[Zen Android MVVM - Medium](https://proandroiddev.com/zen-android-mvvm-160c26f3203c)
 
 # Android MVVM
 在Android应用程序中实现MVP模式的多种变化和迭代之后，我决定以Android Data Binding library为基础来探索实现MVVM, 之后的结果也是让我兴奋不已。
