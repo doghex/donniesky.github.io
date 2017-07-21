@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:		"初识Intent和IntentFilter"
-subtitle:   "初识Intent和IntentFilter的模拟测试。"
+subtitle:   "初识Intent和IntentFilter"
 date:       2017-07-21 16:45:00
 author:     "donnieSky"
 catalog:	true
