@@ -109,6 +109,7 @@ startService(downloadIntent);
 例如，如果您希望用户与他人共享您的内容，请使用 ACTION_SEND 操作创建 Intent，并添加指定共享内容的 extra。 使用该 Intent 调用 startActivity() 时，用户可以选取共享内容所使用的应用。
 
 > 注意：可能没有任何应用会处理发送到 `startActivity()` 的隐式 Intent。如果出现这种情况，则调用将会失败，且应用会崩溃。要验证 Activity 是否会接收 Intent，需对 Intent 对象调用 `resolveActivity()`。如果结果为非空，则至少有一个应用能够处理该 Intent，且可以安全调用 `startActivity()`。 如果结果为空，则不应使用该 Intent。如有可能，您应停用发出该 Intent 的功能。
+
 ```java
 // Create the text message with a string
 Intent sendIntent = new Intent();
@@ -121,6 +122,7 @@ if (sendIntent.resolveActivity(getPackageManager()) != null) {
     startActivity(sendIntent);
 }
 ```
+
 > 注：在这种情况下，系统并没有使用 URI，但已声明 Intent 的数据类型，用于指定 extra 携带的内容。
 
 调用 `startActivity()` 时，系统将检查已安装的所有应用，确定哪些应用能够处理这种 Intent（即：含 `ACTION_SEND` 操作并携带`text/plain`数据的 Intent ）。 如果只有一个应用能够处理，则该应用将立即打开并为其提供 Intent。 如果多个 Activity 接受 Intent，则系统将显示一个对话框，使用户能够选取要使用的应用。
@@ -132,6 +134,7 @@ if (sendIntent.resolveActivity(getPackageManager()) != null) {
 但是，如果多个应用可以响应 Intent，且用户可能希望每次使用不同的应用，则应采用显式方式显示选择器对话框。 选择器对话框每次都会要求用户选择用于操作的应用（用户无法为该操作选择默认应用）。 例如，当应用使用 ACTION_SEND 操作执行“共享”时，用户根据目前的状况可能需要使用另一不同的应用，因此应当始终使用选择器对话框，如下图中所示：
 ![intent-chooser](https://user-images.githubusercontent.com/8588940/28453504-424333e8-6e2a-11e7-8057-1685ee2fd943.png)
 要显式选择器，需使用`crateChooser()`创建Intent，并将其传递给`startActivity`，如：
+
 ```java
 Intent sendIntent = new Intent(Intent.ACTION_SEND);
 ...
@@ -147,6 +150,7 @@ if (sendIntent.resolveActivity(getPackageManager()) != null) {
     startActivity(chooser);
 }
 ```
+
 这将显示一个对话框，其中有响应传递给`createChooser()`方法的Intent的应用列表，并将提供的文本用作对话框标题。
 
 ## 接收隐式Intent
@@ -183,6 +187,7 @@ if (sendIntent.resolveActivity(getPackageManager()) != null) {
     * 在`name`属性中，声明接受的Intent类别，值为字符串；
     * 匹配规则中必须添加`android.intent.category.DEFAULT`这个过滤条件，
     * Intent中可以不设置category，这个时候在使用`startActivity()`或者`startActivityForResult()`的时候，其实系统会自动会添加`android.intent.category.DEFAULT`，但隐式Intent无法解析该Activity;
+
 ```java
 <activity android:name="ShareActivity">
     <intent-filter>
@@ -192,6 +197,7 @@ if (sendIntent.resolveActivity(getPackageManager()) != null) {
     </intent-filter>
 </activity>
 ```
+
 匹配过滤列表时需要同时匹配过滤列表中的action，category，data；个过滤列表中可以有多个action，category，data并各自构成不同类别，一个Intent必须同时匹配action类别，category类别和data类别才算完全匹配；一个Activity中可以有多组intent-filter，一个Intent只要匹配任何一组intent-filter就算匹配成功。
 > 注意：为了避免无意中运行不同应用的`Service`，仅能使用显式Intent启动服务，且不必为该服务声明IntentFilter。对于所有Activity，我们必须在清单文件中声明IntentFilter，但是，广播接收器的过滤器可以调用`registerReceiver()`动态注册，紧接着，使用`unregisterReceiver()`注销该接收器，这样一来，应用便可仅在应用运行时的某一指定时间段内监听特定的广播。
 
