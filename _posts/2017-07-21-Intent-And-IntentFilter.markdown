@@ -23,7 +23,9 @@ tags:
     * 如果`Service`需要操作客户端至服务器接口，则可通过将`Intent`传递给`bindService()`，可以从其他组件绑定到此服务。
 * 发送广播：
     * 广播是任何应用均可接收得消息，系统将针对系统事件（例如：系统启动或设备开始充电时）传递各种广播，通过将`Intent`传递给`sendBroadcast()`、`sendOrderBroadcast()`或`sendStickyBroadcast()`可以将广播传递给其他应用。
-# Intent类型
+
+## Intent类型
+
 intent分为两种类型：
 * 显式Intent：按类名指定要启动的组件，通常我们会在自己的应用中使用显式Intent来启动组件，这是因为我们知道需启动的Activit或Service的类名；
 * 隐式Intent：不指定特定的组件，而是声明需要执行的操作，从而允许其他应用中的组件来处理它。
@@ -40,7 +42,9 @@ IntentFilter是应用清单文件中的一个表达式，它指定该组件要�
 1. Activity A 创建包含操作描述的Intent，并将其传递给`startActivity()`；
 2. Android系统搜索所用应用中与Intent匹配的IntentFilter；
 3. 匹配成功后，系统通过调用匹配的Activity B的`onCreate()`方法并将其传递给`Intent`来启动Activity B。
+
 ## 构建Intent
+
 Intent对象携带了Android系统用来确定要启动哪个组件的信息（例如：准确的组件名称或需要接受该Intent的组件类型），以及接收者组件为了正确执行操作而使用的信息（例如：需要采取的操作以及要处理的数据）。
 
 Intent中主要包含以下信息：
@@ -89,6 +93,7 @@ Intent中主要包含以下信息：
     * flag可以指定Android系统如何启动Activity（例如，activity应属于哪个task），以及启动后应如何处理（例如，它是否属于同一个activity栈）。
     
 ## 显式Intent示例
+
 ```java
 // Executed in an Activity, so 'this' is the Context
 // The fileUrl is a string URL, such as "http://www.example.com/image.png"
@@ -98,6 +103,7 @@ startService(downloadIntent);
 ```
 
 ## 隐式Intent示例
+
 隐式 Intent 指定能够在可以执行相应操作的设备上调用任何应用的操作。 如果您的应用无法执行该操作而其他应用可以，且您希望用户选取要使用的应用，则使用隐式 Intent 非常有用。
 
 例如，如果您希望用户与他人共享您的内容，请使用 ACTION_SEND 操作创建 Intent，并添加指定共享内容的 extra。 使用该 Intent 调用 startActivity() 时，用户可以选取共享内容所使用的应用。
@@ -120,6 +126,7 @@ if (sendIntent.resolveActivity(getPackageManager()) != null) {
 调用 `startActivity()` 时，系统将检查已安装的所有应用，确定哪些应用能够处理这种 Intent（即：含 `ACTION_SEND` 操作并携带`text/plain`数据的 Intent ）。 如果只有一个应用能够处理，则该应用将立即打开并为其提供 Intent。 如果多个 Activity 接受 Intent，则系统将显示一个对话框，使用户能够选取要使用的应用。
 
 ## 强制使用应用选择器
+
 如果有多个应用响应隐式 Intent，则用户可以选择要使用的应用，并将其设置为该操作的默认选项。 如果用户可能希望今后一直使用相同的应用执行某项操作（例如，打开网页时，用户往往倾向于仅使用一种网络浏览器），则这一点十分有用。
 
 但是，如果多个应用可以响应 Intent，且用户可能希望每次使用不同的应用，则应采用显式方式显示选择器对话框。 选择器对话框每次都会要求用户选择用于操作的应用（用户无法为该操作选择默认应用）。 例如，当应用使用 ACTION_SEND 操作执行“共享”时，用户根据目前的状况可能需要使用另一不同的应用，因此应当始终使用选择器对话框，如下图中所示：
@@ -143,6 +150,7 @@ if (sendIntent.resolveActivity(getPackageManager()) != null) {
 这将显示一个对话框，其中有响应传递给`createChooser()`方法的Intent的应用列表，并将提供的文本用作对话框标题。
 
 ## 接收隐式Intent
+
 应用需接收哪些隐式Intent，需在清单文件中使用`<intent-filter>`元素为每个应用组件声明一个或多个IntentFilter，每个IntentFilter均可根据Intent的action、data和category指定自身需接收的Intent类型，仅当隐式Intent可以匹配成功其中一个IntentFilter时，系统才会将该Intent传递给应用组件。
 
 > 注：显式Intent始终会传递Intent给目标组件，无论组件是否声明IntentFilter。
@@ -188,6 +196,7 @@ if (sendIntent.resolveActivity(getPackageManager()) != null) {
 > 注意：为了避免无意中运行不同应用的`Service`，仅能使用显式Intent启动服务，且不必为该服务声明IntentFilter。对于所有Activity，我们必须在清单文件中声明IntentFilter，但是，广播接收器的过滤器可以调用`registerReceiver()`动态注册，紧接着，使用`unregisterReceiver()`注销该接收器，这样一来，应用便可仅在应用运行时的某一指定时间段内监听特定的广播。
 
 ## IntentFilter示例
+
 ```java
 <activity android:name="MainActivity">
     <!-- This activity is the main entry, should appear in app launcher -->
@@ -219,4 +228,5 @@ if (sendIntent.resolveActivity(getPackageManager()) != null) {
 `ACTION_MAIN`和`CATEGORY_LAUNCHER`必须配对使用，activity才会显示在应用启动器中。
 
 ## Intent匹配
+
 `PackageManager`提供了一整套`query...()`方法来返回所有能够接受待定的Intent的组件，还提供了一系列`resolve...()`方法来确定响应Intent的最佳组件；例如，`queryIntentActivities()`将返回能执行作为参数传递的Intent的所有activity列表，而`queryIntentService()`则返回类似的服务列表，这两种方法均不会激活组件，而只是列出能够响应的组件；对于广播接收器，有一种类似的方法：`queryBroadcastReceivers()`。
