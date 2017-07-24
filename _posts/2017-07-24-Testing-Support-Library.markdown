@@ -159,8 +159,8 @@ UI Automator 测试框架提供了一个`UiDevice`类，用于在目标应用运
 * `UiScrollable`：为在可滚动UI容器中搜索项目提供支持；
 * `UiSelector`：表示在设备上查询一个或多个目标元素；
 * `Configurator`：允许设置允许UI Automator测试所需的关键参数。
-例如，以下代码显示了如何编写可在设备中调用默认应用启动器的测试脚本：
 
+例如，以下代码显示了如何编写可在设备中调用默认应用启动器的测试脚本：
 ```java
 // Initialize UiDevice instance
 mDevice = UiDevice.getInstance(getInstrumentation());
