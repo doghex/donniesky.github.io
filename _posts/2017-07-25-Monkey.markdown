@@ -5,7 +5,7 @@ subtitle:   "Monkey是一个可以在模拟器及真机上运行的程序，可�
 date:       2017-07-25 18:18:00
 author:     "donnieSky"
 catalog:	true
-header-img: "img/home-bg.jpg"
+header-img: "img/wallhaven-103658.jpg"
 tags:
     - Android
     - Testing
