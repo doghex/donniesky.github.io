@@ -43,7 +43,7 @@ tags:
 
 有一点值得注意的是，虽然我们已经从`textView2`的顶部到`textView1`的底部创建了一个约束，但是如果我们选中两个`TextView`后仔细观察，我们会发现，`textView2`顶部已附加一个约束，但`textView1`却并没有约束（`textView1`的底部锚点还是空心的）：
 
-![cons_1_2](https://user-images.githubusercontent.com/8588940/29911182-8912e098-8e5f-11e7-899a-b475b7590619.gif)
+![con_2_2](https://user-images.githubusercontent.com/8588940/29914700-11576792-8e6c-11e7-8717-b06fa0c38589.gif)
 
 原因是因为约束是单一的约束（链（chains）是特殊的情况），所以在这个问题中，约束是附加给`textView2`的，并且它是相对于`textView1`来进行定位的，由于约束至附加到`textView2`，所以他对`textView1`的定位是没有直接的影响。
 
