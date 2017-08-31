@@ -59,7 +59,7 @@ ga_domain: donniesky.me
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "听音乐 看电影 看动漫 | 读万卷书，行万里路 | 期待一次说走就走的旅行"
+sidebar-about-description: "听音乐 看电影 看动漫"
 sidebar-avatar: /img/avatar-donniesky.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
