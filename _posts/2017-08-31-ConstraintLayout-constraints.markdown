@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:		"初识ConstraintLayout之约束"
-subtitle:   "创建约束是ConstrainLayout基本视图构建的一部分，约束定义了布局中两个视图组件之间的关系，并且控制这些视图组件在布局中的位置。对于ConstrainLayout的这些新特性，其实和RelativeLayout的约束原理是非常类似的。"
+subtitle:   "创建约束是ConstrainLayout基本视图构建的一部分。"
 date:       2017-08-31 16:00:00
 author:     "donnieSky"
 catalog:	true
