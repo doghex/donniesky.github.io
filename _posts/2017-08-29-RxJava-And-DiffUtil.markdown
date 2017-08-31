@@ -11,6 +11,7 @@ tags:
     - DiffUtil
     - RxJava2
     - RecyclerView
+    - 译文
 ---
 
 [翻译原文链接](https://hellsoft.se/a-nice-combination-of-rxjava-and-diffutil-fe3807186012)
