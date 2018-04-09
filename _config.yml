@@ -75,6 +75,8 @@ service-worker: true
 
 # Friends
 friends: [
-    title: "好3399",
-    href: "http://www.h3399.cn/"
+    {
+      title: "好3399",
+      href: "http://www.h3399.cn/"
+    }
 ]
